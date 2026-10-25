@@ -10,10 +10,10 @@ It automatically inspects your query execution plan before execution to estimate
 
 ## 🚀 Key Features
 
-* **Zero-Cost Telemetry Analysis:** Uses Snowflake's native `SYSTEM$EXPLAIN_PLAN_JSON` to inspect query payloads without executing them or incurring compute charges.
-* **Intelligent Tier Routing:** Automatically maps query byte sizes to your configured warehouse hierarchy.
-* **Frictionless Execution:** Provides a clean callable shorthand syntax (`sb(...)`) that analyzes, routes, executes, and renders results automatically.
-* **Flexible Configuration:** Works out of the box with sensible size defaults or accepts custom data thresholds tailored to your workload.
+- **Zero-Cost Telemetry Analysis:** Uses Snowflake's native `SYSTEM$EXPLAIN_PLAN_JSON` to inspect query payloads without executing them or incurring compute charges.
+- **Intelligent Tier Routing:** Automatically maps query byte sizes to your configured warehouse hierarchy.
+- **Frictionless Execution:** Provides a clean callable shorthand syntax (`sb(...)`) that analyzes, routes, executes, and renders results automatically.
+- **Flexible Configuration:** Works out of the box with sensible size defaults or accepts custom data thresholds tailored to your workload.
 
 ## 📦 Step-by-Step Guide
 
@@ -71,18 +71,23 @@ sb = MultiTierSwitchboard(
 ### 📸 Live Execution Output
 Here is how `snowflake-switchboard-ai` looks in action inside a Snowflake Notebook:
 
-![Execution Output](docs/output_preview.png)
+<p align="center">
+  <video width="100%" controls autoplay loop muted>
+    <source src="docs/test.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 ## ⚙️ How It Works
 
-* **Pre-Check Phase:** Intercepts query execution and executes `SYSTEM$EXPLAIN_PLAN_JSON(...)` at zero compute cost.
-* **Telemetry Analysis:** Recursively parses the JSON plan tree to calculate estimated `bytesAssigned`.
-* **Dynamic Routing:** Automatically executes a fast `USE WAREHOUSE <optimal_tier>` before triggering data retrieval.
+- **Pre-Check Phase:** Intercepts query execution and executes `SYSTEM$EXPLAIN_PLAN_JSON(...)` at zero compute cost.
+- **Telemetry Analysis:** Recursively parses the JSON plan tree to calculate estimated `bytesAssigned`.
+- **Dynamic Routing:** Automatically executes a fast `USE WAREHOUSE <optimal_tier>` before triggering data retrieval.
 
 ## 🛠️ Requirements
 
-* Python `3.8+`
-* `snowflake-snowpark-python >= 1.0.0`
+- Python `3.8+`
+- `snowflake-snowpark-python >= 1.0.0`
 
 ## 📜 License
 
