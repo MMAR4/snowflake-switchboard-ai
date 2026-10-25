@@ -1,0 +1,14 @@
+# Environments & Dependencies
+.venv/
+venv/
+ENV/
+
+# Build & Distribution artifacts
+dist/
+build/
+*.egg-info/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class

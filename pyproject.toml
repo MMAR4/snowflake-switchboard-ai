@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snowflake-switchboard-ai" 
+version = "0.2.0"                    # <--- Bumped version
+description = "A dynamic, metadata-driven query router for Snowflake and Snowpark"
+readme = "README.md"
+authors = [
+    { name = "Murtaza Mohammed Rafiqi", email = "murtuzarafiqui@gmail.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "snowflake-snowpark-python>=1.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/mmar4/snowflake-switchboard-ai" 
