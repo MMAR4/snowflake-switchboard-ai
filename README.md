@@ -69,14 +69,9 @@ sb = MultiTierSwitchboard(
 ```
 
 ### 📸 Live Execution Output
-Here is how `snowflake-switchboard-ai` looks in action inside a Snowflake Notebook:
+Click below to watch the full HD demo of `snowflake-switchboard-ai` scaling warehouses dynamically:
 
-<p align="center">
-  <video width="100%" controls autoplay loop muted>
-    <source src="docs/test.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</p>
+[![Watch the Demo](docs/output_preview.png)](docs/test.mp4)
 
 ## ⚙️ How It Works
 
